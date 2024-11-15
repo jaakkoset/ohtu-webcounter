@@ -20,3 +20,10 @@ When counter has a nonzero value and it is reset the value becomes zero
     Click Button  Paina
     Click Button  Nollaa
     Page Should Contain  nappia painettu 0 kertaa
+
+When a counter is increased by 123 the value becomes 123
+    Go To  ${HOME_URL}
+    Click Button  Nollaa
+    Input Text  amount  123
+    Click Button  Aseta
+    Page Should Contain  nappia painettu 123 kertaa
